@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_load_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Load Image"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="320dp"
@@ -24,15 +34,14 @@
         android:layout_marginTop="25dp"
         android:text="Take Image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/texteview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="35dp"
         android:text="Output:"
         android:textSize="24sp"
@@ -49,5 +58,12 @@
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/texteview"
         app:layout_constraintTop_toBottomOf="@+id/btn_capture_image" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".5"
+        android:orientation="vertical" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
