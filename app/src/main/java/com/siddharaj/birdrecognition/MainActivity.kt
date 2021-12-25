@@ -118,6 +118,12 @@ class MainActivity : AppCompatActivity() {
             return@setOnLongClickListener true
         }
 
+        // to redirect user to google search for the scientific name
+        tvOutput.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW,Uri.parse("https://www.google.com/search?q=${tvOutput.text}"))
+            startActivity(intent)
+        }
+
     }
 
     // function that takes a bitmap and stores to user's device
